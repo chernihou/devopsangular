@@ -1,7 +1,8 @@
 services:
   angular:
     image: angular
-    ports: "4200:4200"
+    ports: 
+      - "4200:4200"
   spring-boot-app:
     image: devopsangular
     ports:
