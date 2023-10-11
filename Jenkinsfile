@@ -27,7 +27,7 @@ pipeline{
   steps {
     dir("devopsangular/angular-app"){ 
       sh "npm install"  
-      sh "npm run ng build -t angular ."  
+      sh "docker build -t angular ."  
     }
   }
 }
