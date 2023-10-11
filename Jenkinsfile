@@ -27,7 +27,7 @@ pipeline{
   steps {
     dir("devopsangular/angular-app"){ 
       sh "npm install"  
-      sh "ng build --prod"  
+      sh "npm run ng build --prod"  
     }
   }
 }
