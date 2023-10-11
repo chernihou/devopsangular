@@ -1,0 +1,17 @@
+# Utilisez l'image Node.js comme base
+FROM node:14
+
+# Répertoire de travail dans le conteneur
+WORKDIR /app
+
+# Copiez les fichiers de l'application Angular dans le conteneur
+COPY . .
+
+# Installez les dépendances du projet
+RUN npm install
+
+# Exposez le port sur lequel le serveur de développement Angular s'exécute par défaut (4200)
+EXPOSE 4200
+
+# Commande pour démarrer l'application Angular en mode développement
+CMD ["npm", "start"]
